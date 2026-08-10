@@ -1,0 +1,66 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - images
+    - data/content-index.json
+  render:
+    - "*.qmd"
+    - "research/**/*.qmd"
+    - "projects/**/*.qmd"
+    - "updates/**/*.qmd"
+    - "!projects/_template.qmd"
+    - "!updates/_template.qmd"
+
+website:
+  title: "Ola Popoola"
+  draft-mode: gone
+  site-url: "https://orpopoola.github.io"
+  description: "Research in connected robotics, spatial intelligence, autonomous systems, and 6G / AI-RAN."
+  favicon: images/site/favicon.svg
+  search:
+    location: navbar
+    type: overlay
+  open-graph: true
+  twitter-card: true
+  page-navigation: true
+  navbar:
+    pinned: true
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Research
+        href: research.qmd
+      - text: Projects
+        href: projects.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: People
+        href: people.qmd
+      - text: About
+        href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/orpopoola
+        aria-label: GitHub profile
+  page-footer:
+    left: "© Ola Popoola"
+    right: "Built with [Quarto](https://quarto.org/)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles/custom.scss
+    toc: true
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    code-copy: true
+    include-after-body: includes/footer.html
+
+execute:
+  freeze: auto
+
+metadata-files:
+  - data/site-metadata.yml

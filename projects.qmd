@@ -1,0 +1,14 @@
+---
+title: "Projects"
+description: "Verified projects in connected robotics, spatial intelligence, autonomous systems, and 6G / AI-RAN."
+listing:
+  contents: projects
+  sort: "title"
+  type: grid
+  categories: true
+  filter-ui: true
+  fields: [image, title, description, categories]
+  page-size: 12
+---
+
+Projects are published only after their source evidence, status, relationships, and media have been reviewed. Candidate records generated from the supplied PDFs currently remain drafts.

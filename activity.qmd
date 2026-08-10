@@ -1,0 +1,14 @@
+---
+title: "Research Activity"
+description: "A chronological archive of verified experiments, demonstrations, field trials, and research milestones."
+listing:
+  contents: updates
+  sort: "date desc"
+  type: grid
+  categories: true
+  filter-ui: true
+  fields: [image, date, title, description, categories]
+  page-size: 12
+---
+
+Published research updates appear here in reverse chronological order. Draft and review records are excluded from the rendered site.

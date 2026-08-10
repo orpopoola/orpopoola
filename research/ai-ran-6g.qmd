@@ -1,0 +1,10 @@
+---
+title: "6G / AI-RAN"
+description: "Intelligent next-generation communications and communication-aware autonomous systems."
+---
+
+6G / AI-RAN covers next-generation intelligent communications, radio-resource management, edge intelligence, and communication-aware autonomous systems. Verified related work will be surfaced below.
+
+::: {data-content-list="" data-theme="6G / AI-RAN"}
+No records in this theme have completed review yet.
+:::

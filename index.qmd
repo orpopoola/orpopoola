@@ -1,0 +1,100 @@
+---
+title: "Ola Popoola"
+description: "Ola Popoola's research platform for connected robotics, spatial intelligence, autonomous systems, and 6G / AI-RAN."
+page-layout: full
+toc: false
+title-block-banner: false
+---
+
+::: {.hero}
+::: {.hero__content}
+<p class="eyebrow">Research platform</p>
+
+# Ola Popoola
+
+<p class="hero__themes">Connected Robotics · Spatial Intelligence · Autonomous Systems · 6G / AI-RAN</p>
+
+Research connecting intelligent communication networks with autonomous and mission-critical systems. This site is being developed from preserved research source material, with evidence reviewed before publication.
+
+::: {.hero__actions}
+[Explore research](research.qmd){.btn .btn-primary}
+[View projects](projects.qmd){.btn .btn-outline-light}
+[Publications](publications.qmd){.btn .btn-link-light}
+:::
+:::
+:::
+
+::: {.section-intro}
+## Research areas
+
+Four themes organise the programme from sensing and reasoning through autonomy, connectivity, and real-world robotic systems.
+:::
+
+::: {.theme-grid}
+::: {.theme-card}
+<span class="theme-card__number">01</span>
+### Connected Robotics
+Networked, cooperative, and communication-aware robotic systems.
+
+[Explore the theme →](research/connected-robotics.qmd)
+:::
+::: {.theme-card}
+<span class="theme-card__number">02</span>
+### Spatial Intelligence
+Localisation, perception, spatial reasoning, and interaction with physical environments.
+
+[Explore the theme →](research/spatial-intelligence.qmd)
+:::
+::: {.theme-card}
+<span class="theme-card__number">03</span>
+### Autonomous Systems
+Planning, control, and decision-making for robots, vehicles, UAVs, and multi-agent systems.
+
+[Explore the theme →](research/autonomous-systems.qmd)
+:::
+::: {.theme-card}
+<span class="theme-card__number">04</span>
+### 6G / AI-RAN
+Intelligent radio-resource management, edge intelligence, and communication-aware autonomy.
+
+[Explore the theme →](research/ai-ran-6g.qmd)
+:::
+:::
+
+::: {.narrative-band}
+**Spatial intelligence** <span>→</span> **Autonomy** <span>→</span> **Connectivity** <span>→</span> **Connected robotics** <span>→</span> **Real-world validation**
+:::
+
+## Latest research
+
+Research updates extracted from source PDFs remain in review until their dates, descriptions, imagery, and publication status have been verified. Approved updates will appear here automatically.
+
+::: {data-content-list="" data-kind="update" data-limit="6"}
+::: {.empty-state}
+**Research records are under review.**
+
+[View the research activity archive](activity.qmd).
+:::
+:::
+
+## Featured projects
+
+Project records are generated as reviewable drafts rather than published automatically. This protects unpublished, personal, and commercially sensitive material.
+
+::: {data-content-list="" data-kind="project" data-featured="true" data-limit="4"}
+[Explore projects](projects.qmd){.btn .btn-primary}
+:::
+
+::: {.collaboration-band}
+::: {.grid}
+::: {.g-col-12 .g-col-md-8}
+## Explore collaboration
+
+The research themes provide a starting point for conversations about academic research, industry R&D, experimental validation, PhD research, collaborative projects, and invited talks. Availability and scope should be confirmed directly.
+:::
+::: {.g-col-12 .g-col-md-4 .collaboration-band__action}
+[View research areas](research.qmd){.btn .btn-light}
+[GitHub profile](https://github.com/orpopoola){.btn .btn-outline-light}
+:::
+:::
+:::
