@@ -1,0 +1,23 @@
+---
+title: "Research update title"
+description: "Approximately 100 words describing verified research activity."
+date: "YYYY-MM-DD"
+status: draft
+draft: true
+featured: false
+categories:
+  - "Research theme"
+project: "project-slug"
+tags: []
+image: ../images/updates/example/main.jpg
+image-alt: "[IMAGE DESCRIPTION REQUIRED]"
+source:
+  type: pdf
+  file: source-materials/presentations/example.pdf
+---
+
+Write a concise, evidence-led account of the activity. State what was done and why it matters without claiming unsupported outcomes.
+
+## Gallery
+
+Add reviewed images only when their context and alt text are known.

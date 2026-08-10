@@ -1,0 +1,10 @@
+---
+title: "Connected Robotics"
+description: "Networked, cooperative, and communication-aware robotic systems."
+---
+
+Connected Robotics considers robotic systems whose sensing, coordination, control, or operation depends on communication networks. Verified projects and research updates carrying this theme will be surfaced below.
+
+::: {data-content-list="" data-theme="Connected Robotics"}
+No records in this theme have completed review yet.
+:::

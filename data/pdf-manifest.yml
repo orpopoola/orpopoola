@@ -1,0 +1,62 @@
+# Human-reviewed processing ledger. Original PDFs remain unchanged.
+documents:
+  - source: "source-materials/presentations/Application overview - UKRI Funding Service.pdf"
+    sha256: 57a737f2436679451a8b504d791c574b0306b7f37f3e929193f8b1b6aa8c4759
+    classification: funding-application
+    status: restricted-review
+    processed: false
+    notes: "Contains application material and named personal metadata; do not publish without owner review."
+  - source: "source-materials/presentations/Intelligent Resource Allocation for 6G-Based Mission-Critical Systems_ A Survey on Enabling Technologies and Application_OP.pdf"
+    sha256: e7537f1f1651f363135d59b55d9a3b072e497991f30e97a539cd158532f1987c
+    classification: research-survey
+    status: review
+    processed: false
+    candidate_themes: ["6G / AI-RAN", "Autonomous Systems"]
+    notes: "A survey source, not evidence of a distinct research project. Forty embedded JPEG assets detected; none approved for publication."
+  - source: "source-materials/presentations/MSc Report.pdf"
+    sha256: 7cd98b7c9ca686698a66d8ab18d4ed35453492c4e7d00afdfff9e6696ba4c100
+    classification: student-report
+    status: restricted-review
+    processed: false
+    notes: "PDF metadata names Zhuofan Cui (student). Treat personal, authorship, and supervision details cautiously."
+  - source: "source-materials/presentations/Resource Allocation for URLLC and mMTC in 6G Industrial IoT Networks - Joint Optimization under Mixed-Numerology and SNR Constraints.pdf"
+    sha256: 94ee0775f6668ebf77212e656f638b504df070119638c5eed0df4f2ba72863ed
+    classification: technical-paper
+    status: review
+    processed: false
+    candidate_project: resource-allocation-urllc-mmtc
+    candidate_themes: ["6G / AI-RAN"]
+    notes: "Likely related to other URLLC/mMTC documents; relationship and authorship require review."
+  - source: "source-materials/presentations/Resource Allocation for URLLCmMTC in 6G Industrial IoT Networks_OP.pdf"
+    sha256: 0169d39d1e3cabf9ff017f05f3fc05b4d11822f4cd3bcaf60d7c0b166bd5b7b6
+    classification: technical-report
+    status: review
+    processed: false
+    candidate_project: resource-allocation-urllc-mmtc
+    candidate_themes: ["6G / AI-RAN"]
+    notes: "Likely related to the joint-optimisation paper and student reports; verify before merging records."
+  - source: "source-materials/presentations/Review_Paper__Teleoperation_of_Semi_Autonomous_Vehicles-2_OP.pdf"
+    sha256: c2946538cee6c5c145939e6197e295108a1dcc7a60096ea2a3dfe48a4b132791
+    classification: review-paper
+    status: review
+    processed: false
+    candidate_themes: ["Connected Robotics", "Autonomous Systems", "6G / AI-RAN"]
+    notes: "A review source, not evidence of a distinct project or experiment."
+  - source: "source-materials/presentations/Zhuofan Cui_113263169_assignsubmission_file_ENG5059PReport_2986732C.pdf"
+    sha256: 529cc6260a8e4469beef72044d738de5ed7343e1cf9231047b785355eac91d84
+    classification: student-submission
+    status: restricted-review
+    processed: false
+    notes: "Filename and PDF metadata contain student-identifying information; withhold from public content."
+  - source: "source-materials/presentations/Zhuofan_paper__Copy_.pdf"
+    sha256: 103a9caa3274f11e50d8c8e4ce229f41941ea34757fdff647cf25a801590dddb
+    classification: technical-paper
+    status: restricted-review
+    processed: false
+    notes: "Authorship and publication status require verification."
+  - source: "source-materials/presentations/jb-thesis-submission-12-06-25_OP.pdf"
+    sha256: bbad489fbe45ff41cc6ee60382ed31d0a48fab11e3bc14cfab9d60b71b1b492c
+    classification: thesis-submission
+    status: restricted-review
+    processed: false
+    notes: "Thesis content and personal information require review; the filename date is not used as an activity date."

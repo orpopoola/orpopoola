@@ -1,0 +1,10 @@
+---
+title: "Spatial Intelligence"
+description: "Localisation, perception, spatial reasoning, and intelligent interaction with physical environments."
+---
+
+Spatial Intelligence covers localisation, perception, spatial reasoning, and intelligent interaction with physical environments. Verified related work will be surfaced below.
+
+::: {data-content-list="" data-theme="Spatial Intelligence"}
+No records in this theme have completed review yet.
+:::
