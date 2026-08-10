@@ -1,16 +1,25 @@
-## Hi there 👋
+# O. R. Popoola
 
-<!--
-**orpopoola/orpopoola** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This profile repository collects research materials and project documents related
+to next-generation communication networks and mission-critical systems.
 
-Here are some ideas to get you started:
+## Research interests
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Intelligent resource allocation for 6G networks
+- Ultra-reliable low-latency communication (URLLC)
+- Massive machine-type communication (mMTC)
+- Industrial Internet of Things (IIoT)
+- Teleoperation and semi-autonomous vehicles
+
+## Repository contents
+
+- `source-materials/presentations/` contains reports, papers, presentations, and
+  funding-application material used as research references.
+- `project-abstracts` is reserved for summaries of current and proposed projects.
+- `photos` is reserved for profile and project imagery.
+
+## Purpose
+
+The repository serves as a central place for sharing research interests,
+organizing supporting material, and documenting work on reliable, intelligent
+communication systems.
