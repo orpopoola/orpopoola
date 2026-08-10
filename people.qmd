@@ -1,0 +1,13 @@
+---
+title: "People"
+description: "People associated with Ola Popoola's research programme."
+toc: false
+---
+
+## Ola Popoola
+
+Research interests span connected robotics, spatial intelligence, autonomous systems, and 6G / AI-RAN.
+
+[GitHub profile](https://github.com/orpopoola)
+
+Additional roles, biographies, and team relationships will be published only after verification. Names found in source PDFs are not treated automatically as team membership.

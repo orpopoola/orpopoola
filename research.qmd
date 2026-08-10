@@ -1,0 +1,33 @@
+---
+title: "Research"
+description: "The connected research themes spanning spatial intelligence, autonomy, communications, and connected robotics."
+page-layout: full
+toc: false
+---
+
+::: {.page-lede}
+The programme links algorithms, intelligent communications, robotic systems, and experimentation. Each theme page will collect verified projects, updates, and publications through shared metadata.
+:::
+
+::: {.theme-grid}
+::: {.theme-card}
+### [Connected Robotics](research/connected-robotics.qmd)
+Networked, cooperative, and communication-aware robotic systems.
+:::
+::: {.theme-card}
+### [Spatial Intelligence](research/spatial-intelligence.qmd)
+Localisation, perception, spatial reasoning, and intelligent interaction with physical environments.
+:::
+::: {.theme-card}
+### [Autonomous Systems](research/autonomous-systems.qmd)
+Planning, control, decision-making, robots, UAVs, connected vehicles, and multi-agent systems.
+:::
+::: {.theme-card}
+### [6G / AI-RAN](research/ai-ran-6g.qmd)
+Next-generation communications, intelligent radio-resource management, edge intelligence, and communication-aware systems.
+:::
+:::
+
+## Research activity
+
+[Browse the activity archive](activity.qmd) for published experiments, demonstrations, technical progress, and project milestones.

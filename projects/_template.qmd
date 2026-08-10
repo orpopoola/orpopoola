@@ -1,0 +1,37 @@
+---
+title: "Project title"
+description: "A concise 50–120 word summary supported by the source."
+status: draft
+draft: true
+featured: false
+categories:
+  - "Research theme"
+tags: []
+image: ../images/projects/example/hero.jpg
+image-alt: "[IMAGE DESCRIPTION REQUIRED]"
+source:
+  type: pdf
+  file: source-materials/presentations/example.pdf
+---
+
+## Challenge
+
+Describe the supported research problem.
+
+## Approach
+
+Describe the supported technical approach.
+
+## System and experiments
+
+Describe verified hardware, software, testbed, and experimental evidence.
+
+## Outcomes
+
+Include only results supported explicitly by a reviewed source.
+
+## Latest activity
+
+::: {data-content-list="" data-project="project-slug" data-kind="update"}
+No published research updates are linked to this project.
+:::

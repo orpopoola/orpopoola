@@ -1,0 +1,12 @@
+- id: connected-robotics
+  title: Connected Robotics
+  description: Networked, cooperative, and communication-aware robotic systems.
+- id: spatial-intelligence
+  title: Spatial Intelligence
+  description: Localisation, perception, spatial reasoning, and intelligent interaction with physical environments.
+- id: autonomous-systems
+  title: Autonomous Systems
+  description: Planning, control, and decision-making for robots, UAVs, vehicles, and multi-agent systems.
+- id: ai-ran-6g
+  title: 6G / AI-RAN
+  description: Intelligent communications, radio-resource management, edge intelligence, and communication-aware systems.

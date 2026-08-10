@@ -1,0 +1,21 @@
+---
+title: "About"
+description: "About Ola Popoola and this research platform."
+---
+
+## Dr Olaoluwa Rotimi Popoola
+
+Ola Popoola's research materials address intelligent resource allocation for 6G networks, mission-critical communications, industrial Internet of Things systems, and teleoperation. This website organises that work within four connected themes while retaining source provenance and a human review gate.
+
+## Research interests
+
+- Connected robotics
+- Spatial intelligence
+- Autonomous systems
+- 6G / AI-RAN
+
+## Profiles
+
+- [GitHub — @orpopoola](https://github.com/orpopoola)
+
+Academic position, education, professional memberships, external profiles, biography, and contact details have not been supplied in a verified source and are therefore not displayed.
