@@ -1,0 +1,11 @@
+---
+title: "Publications"
+description: "Verified publications by Ola Popoola."
+bibliography: data/publications.bib
+nocite: "@*"
+---
+
+The bibliography is intentionally empty until complete publication metadata can be verified from an authoritative source such as a CV, DOI record, or confirmed author bibliography.
+
+::: {#refs}
+:::

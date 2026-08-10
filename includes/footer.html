@@ -1,0 +1,35 @@
+<script>
+(() => {
+  const escape = (value) => {
+    const node = document.createElement("span");
+    node.textContent = value || "";
+    return node.innerHTML;
+  };
+  const prefix = location.pathname.includes("/research/") || location.pathname.includes("/projects/") ? "../" : "";
+  fetch(`${prefix}data/content-index.json`).then((response) => response.json()).then((items) => {
+    document.querySelectorAll("[data-content-list]").forEach((container) => {
+      const kind = container.dataset.kind;
+      const theme = container.dataset.theme;
+      const project = container.dataset.project;
+      const featured = container.dataset.featured === "true";
+      const limit = Number(container.dataset.limit || 20);
+      const matches = items.filter((item) =>
+        (!kind || item.kind === kind) &&
+        (!theme || item.themes.includes(theme)) &&
+        (!project || item.project === project) &&
+        (!featured || item.featured)
+      ).slice(0, limit);
+      if (!matches.length) return;
+      container.innerHTML = `<div class="research-card-grid">${matches.map((item) => `
+        <article class="research-card">
+          ${item.image ? `<img src="${escape(prefix + item.image.replace(/^\.\.\//, ""))}" alt="${escape(item.image_alt)}" loading="lazy">` : ""}
+          <div class="research-card__body">
+            <p class="research-card__meta">${escape(item.date || item.themes.join(" · "))}</p>
+            <h3><a href="${escape(prefix + item.href)}">${escape(item.title)}</a></h3>
+            <p>${escape(item.description)}</p>
+          </div>
+        </article>`).join("")}</div>`;
+    });
+  }).catch(() => {});
+})();
+</script>

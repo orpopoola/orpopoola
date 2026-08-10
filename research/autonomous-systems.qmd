@@ -1,0 +1,10 @@
+---
+title: "Autonomous Systems"
+description: "Planning, control, and decision-making for autonomous and multi-agent systems."
+---
+
+Autonomous Systems addresses planning, control, and decision-making in robots, UAVs, connected and autonomous vehicles, and multi-agent systems. Verified related work will be surfaced below.
+
+::: {data-content-list="" data-theme="Autonomous Systems"}
+No records in this theme have completed review yet.
+:::
