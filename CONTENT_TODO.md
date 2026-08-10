@@ -4,7 +4,7 @@ Nothing in this checklist should be treated as public fact until a named owner h
 
 ## High Priority
 
-- [ ] Confirm the repository is `orpopoola/orpopoola.github.io`; the selected Git history originated from `orpopoola/orpopoola`.
+- [ ] Complete or verify the repository rename to `orpopoola/orpopoola.github.io` before deployment; the workflow deliberately rejects the former repository name.
 - [ ] Supply or confirm Dr Popoola's current professional title and institutional affiliation.
 - [ ] Review every manifest entry before changing any generated record from `draft: true` to public.
 - [ ] Confirm whether source PDFs may remain in the production repository; Quarto does not copy them to `_site` under the current configuration.

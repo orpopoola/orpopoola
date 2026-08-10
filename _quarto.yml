@@ -15,7 +15,7 @@ project:
 website:
   title: "Ola Popoola"
   draft-mode: gone
-  site-url: "https://orpopoola.github.io"
+  site-url: "https://orpopoola.github.io/"
   description: "Research in connected robotics, spatial intelligence, autonomous systems, and 6G / AI-RAN."
   favicon: images/site/favicon.svg
   search:

@@ -1,6 +1,6 @@
 # Your Website
 
-This repository contains the research website for **Ola Popoola**. When the repository is connected to GitHub Pages, the public address is <https://orpopoola.github.io>.
+This repository, `orpopoola/orpopoola.github.io`, contains the GitHub user website for **Ola Popoola**. Its production address is <https://orpopoola.github.io/>. It is a user site and must not be deployed under the former project-site subpath.
 
 You do not need to write HTML to keep the site current. Projects and short Research Updates are ordinary QMD (Markdown) files. Publications are BibTeX records. Original research PDFs stay in `source-materials/` and are used to prepare reviewable drafts; they are **not** copied to the public website.
 
@@ -80,7 +80,7 @@ Add verified structured information to `data/people.yml`, then add approved publ
 
 `.github/workflows/publish.yml` validates, renders, checks that PDFs were not copied to `_site`, and deploys the result through GitHub Pages whenever `main` changes.
 
-One GitHub setting remains manual: in **Repository settings → Pages → Build and deployment → Source**, select **GitHub Actions**. Confirm the production repository is named `orpopoola.github.io`; the repository originally inspected by Codex identified itself as `orpopoola/orpopoola`.
+The deployment workflow verifies that it is running in `orpopoola/orpopoola.github.io`, enables GitHub Pages when necessary, and deploys from GitHub Actions. If the repository has not yet been renamed, rename it to `orpopoola.github.io` before running the workflow. No project-site base path or custom-domain setting is required.
 
 No analytics or custom domain is configured. A future custom domain can be added through GitHub Pages without changing internal site links.
 

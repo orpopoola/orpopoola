@@ -3,12 +3,21 @@
 
 from __future__ import annotations
 
+import argparse
+import hashlib
 import re
 import sys
-import hashlib
+from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+PRODUCTION_URL = "https://orpopoola.github.io/"
+LEGACY_SEGMENT = "orpopoola"
+LEGACY_SITE_REFERENCES = (
+    f"https://orpopoola.github.io/{LEGACY_SEGMENT}",
+    f'"/{LEGACY_SEGMENT}/',
+    f"'/{LEGACY_SEGMENT}/",
+)
 REQUIRED = (
     "_quarto.yml", "index.qmd", "research.qmd", "projects.qmd",
     "publications.qmd", "people.qmd", "about.qmd", "CONTENT_TODO.md",
@@ -17,7 +26,49 @@ REQUIRED = (
 LINK = re.compile(r"(?<!!)\[[^]]*]\(([^)#]+)(?:#[^)]+)?\)")
 
 
+class AssetLinkParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.targets: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = dict(attrs)
+        attribute = "href" if tag in {"a", "link"} else "src" if tag in {"img", "script", "source"} else None
+        if attribute and values.get(attribute):
+            self.targets.append(values[attribute] or "")
+
+
+def validate_rendered_site(output: Path) -> list[str]:
+    errors: list[str] = []
+    if not output.is_dir():
+        return [f"Rendered site directory does not exist: {output}"]
+    for html in output.rglob("*.html"):
+        text = html.read_text(encoding="utf-8", errors="replace")
+        for legacy in LEGACY_SITE_REFERENCES:
+            if legacy in text:
+                errors.append(f"Legacy project-site path in rendered file {html.relative_to(output)}")
+        parser = AssetLinkParser()
+        parser.feed(text)
+        for target in parser.targets:
+            clean = target.split("#", 1)[0].split("?", 1)[0]
+            if not clean or clean.startswith(("http://", "https://", "mailto:", "data:", "javascript:")):
+                continue
+            candidate = output / clean.lstrip("/") if clean.startswith("/") else html.parent / clean
+            if candidate.is_dir():
+                candidate /= "index.html"
+            if not candidate.exists():
+                errors.append(f"Broken rendered link in {html.relative_to(output)}: {target}")
+    return errors
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--rendered", type=Path, help="Also validate a rendered Quarto output directory")
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     errors: list[str] = []
     for relative in REQUIRED:
         if not (ROOT / relative).is_file():
@@ -61,10 +112,28 @@ def main() -> int:
                 errors.append(f"Broken link in {document.relative_to(ROOT)}: {target}")
 
     quarto = (ROOT / "_quarto.yml").read_text(encoding="utf-8")
+    site_url = re.search(r'(?m)^\s*site-url:\s*["\']?([^"\'\s]+)', quarto)
+    if not site_url or site_url.group(1) != PRODUCTION_URL:
+        errors.append(f"Quarto site-url must be exactly {PRODUCTION_URL}")
     if not re.search(r"(?m)^\s*draft-mode:\s*gone\s*$", quarto):
         errors.append("Quarto must use draft-mode: gone to exclude review content")
     if "source-materials" in re.findall(r"(?m)^\s*-\s+(.+)$", quarto):
         errors.append("Source materials must not be configured as site resources")
+    for href in re.findall(r"(?m)^\s*href:\s*([^#\n]+)", quarto):
+        target = href.strip().strip('"\'')
+        if "://" not in target and not (ROOT / target).exists():
+            errors.append(f"Broken Quarto navigation link: {target}")
+
+    for document in [*checked, *ROOT.rglob("*.yml"), *ROOT.rglob("*.html"), *ROOT.rglob("*.json"), *ROOT.rglob("*.scss")]:
+        if any(part in {".git", "_site", ".ingest"} for part in document.parts):
+            continue
+        text = document.read_text(encoding="utf-8")
+        for legacy in LEGACY_SITE_REFERENCES:
+            if legacy in text:
+                errors.append(f"Legacy project-site path in {document.relative_to(ROOT)}: {legacy}")
+
+    if args.rendered:
+        errors.extend(validate_rendered_site(args.rendered.resolve()))
 
     if errors:
         print("\n".join(f"ERROR: {error}" for error in errors), file=sys.stderr)
